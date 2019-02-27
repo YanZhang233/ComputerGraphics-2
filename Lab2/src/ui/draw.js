@@ -1,8 +1,8 @@
 import {getiBuffer} from "../transformation/getModel.js";
+import { model } from "../objects/model.js";
 
 // Draw model on the canvas
-
-export const draw = (ctx, width, height, model) => () => {
+export const draw = (ctx, width, height) => () => {
     // clear before image
     ctx.clearRect(0, 0, width, height);
     // draw

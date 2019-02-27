@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4985bab7-435c-4b8c-afcf-da6a6f39cda6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2/src/objects/color.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2/src/transformation/initPixel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2/src/transformation/scanConversion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/src/objects/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/objects/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/src/transformation/initModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/transformation/initModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/src/ui/draw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/ui/draw.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/draw.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -36,6 +36,15 @@
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/objects/model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -81,7 +90,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
+    <option name="x" value="39" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="821" />
@@ -92,6 +101,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,7 +136,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,14 +173,15 @@
       <workItem from="1551042009311" duration="634000" />
       <workItem from="1551228631403" duration="92000" />
       <workItem from="1551230078906" duration="586000" />
+      <workItem from="1551297079048" duration="250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19190000" />
+    <option name="totallyTimeSpent" value="19440000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="23" width="1400" height="821" extended-state="0" />
+    <frame x="39" y="23" width="1400" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14213198" />
@@ -260,13 +270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/transformation/initCamera.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -325,6 +328,13 @@
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

@@ -1,16 +1,18 @@
-export const initModel = (uploadedFile, draw, model) => {
+import { model, colorInit } from "../objects/model.js";
+
+export const initModel = (uploadedFile, draw) => {
     const file = uploadedFile.files[0];
     const reader = new FileReader();
     reader.readAsText(file);
     reader.onload = () => {
         const data = reader.result;
-        parseFile(data, model);
-        model.colorInit();
+        parseFile(data);
+        colorInit();
         draw();
     };
 };
 
-const parseFile = (data, model) => {
+const parseFile = (data) => {
     let lines = data.match(/[^\r\n]+/g);
     let [num, pointsNum, facesNum] = lines[0].trim().split(/\s+/);
 
@@ -36,7 +38,5 @@ const parseFile = (data, model) => {
             model.faces.push(res.map(x => parseInt(x, 10) - 1 + lastModelPNum));
         }
     }
-    console.log(model);
-    return model;
 };
 
