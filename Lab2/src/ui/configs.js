@@ -1,6 +1,6 @@
 import { camera } from '../objects/camera.js';
 import { cameraInit } from "../transformation/initCamera.js";
-import { vecAdd, vecScale } from '../math/matrix.js';
+import { vecScale } from '../math/matrix.js';
 
 // slider
 export const bindSlider = (name, operation) => {

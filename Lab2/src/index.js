@@ -3,7 +3,6 @@ import {
     cameraOperation } from './ui/configs.js';
 import {initModel} from "./transformation/initModel.js";
 import { draw } from "./ui/draw.js";
-import { model } from "./objects/model.js";
 
 // Get canvas ready
 const canvas = document.querySelector('#content');
