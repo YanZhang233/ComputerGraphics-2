@@ -1,19 +1,16 @@
-import {model} from "../objects/model.js";
-import {colorInit} from "../objects/model.js";
-
-export const initModel = (uploadedFile, draw) => {
+export const initModel = (uploadedFile, draw, model) => {
     const file = uploadedFile.files[0];
     const reader = new FileReader();
     reader.readAsText(file);
     reader.onload = () => {
         const data = reader.result;
-        parseFile(data);
-        colorInit();
+        parseFile(data, model);
+        model.colorInit();
         draw();
     };
 };
 
-const parseFile = (data) => {
+const parseFile = (data, model) => {
     let lines = data.match(/[^\r\n]+/g);
     let [num, pointsNum, facesNum] = lines[0].trim().split(/\s+/);
 
@@ -23,23 +20,23 @@ const parseFile = (data) => {
         pointsNum = num;
     }
 
+    const pNum = parseInt(pointsNum, 10);
+    const fNum = parseInt(facesNum, 10);
     // load data to model
-    model.pointsNum = parseInt(pointsNum, 10);
-    model.facesNum = parseInt(facesNum, 10);
-    // here we refresh the object when load different model
-    model.points = [];
-    model.faces = [];
+    const lastModelPNum = model.points.length;
 
-    for (let i = 1; i <= model.pointsNum; i++) {
+    for (let i = 1; i <= pNum; i++) {
         let [x, y, z] = lines[i].trim().split(/\s+/);
         model.points.push([parseFloat(x), parseFloat(y), parseFloat(z)]);
     }
 
-    for (let i = model.pointsNum + 1; i <= model.pointsNum + model.facesNum; i++) {
+    for (let i = pNum + 1; i <= pNum + fNum; i++) {
         let [num, ...res] = lines[i].trim().split(/\s+/);
         if (res.length > 2) {
-            model.faces.push(res.map(x => parseInt(x) - 1));
+            model.faces.push(res.map(x => parseInt(x, 10) - 1 + lastModelPNum));
         }
     }
+    console.log(model);
+    return model;
 };
 

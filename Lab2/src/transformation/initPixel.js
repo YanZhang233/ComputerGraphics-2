@@ -5,7 +5,7 @@ export const toFloatPixel = (value, height) => {
     return (value + 1) * height / 2;
 };
 
-export const toPixel = (value, height, shortten) => {
+export const toPixel = (value, height, shortten = false) => {
     return Math.floor((value + 1) * height / 2) - (shortten ? 1 : 0);
 };
 

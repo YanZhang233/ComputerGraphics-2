@@ -2,7 +2,6 @@ import { matMultiply, matMulVec, vecExtend, vecCollapse } from '../math/matrix.j
 import { worldToCamera } from "./worldToCamera.js";
 import { perspectiveTrans } from "./perspectiveTrans.js";
 import {backfaceCulling} from "./backfaceCulling.js";
-import {model} from "../objects/model.js";
 import {scanConversion} from "./scanConversion.js";
 import {cameraInit} from "./initCamera.js";
 
@@ -14,10 +13,10 @@ export const getModel = model => {
     });
 };
 
-export const getiBuffer = (height, width) => {
+export const getiBuffer = (model, height, width) => {
     // Calculate N, U, V vector
     cameraInit();
-    const backfaceSet = backfaceCulling();
+    const backfaceSet = backfaceCulling(model);
     const calcPoints = getModel(model);
     return scanConversion(model, calcPoints, backfaceSet, height, width);
 };

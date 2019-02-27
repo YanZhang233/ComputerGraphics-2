@@ -2,13 +2,13 @@ import {getiBuffer} from "../transformation/getModel.js";
 
 // Draw model on the canvas
 
-export const draw = (ctx, width, height) => () => {
+export const draw = (ctx, width, height, model) => () => {
     // clear before image
     ctx.clearRect(0, 0, width, height);
     // draw
     const imageData = ctx.createImageData(width, height);
     const data = new Uint8Array(width * height * 4);
-    const iBuffer = getiBuffer(height, width);
+    const iBuffer = getiBuffer(model, height, width);
     for (let i = 0; i < height; i++) {
         for (let j = 0; j < width; j++) {
             const t = i * width + j;

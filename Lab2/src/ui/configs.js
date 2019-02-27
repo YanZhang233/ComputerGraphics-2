@@ -33,22 +33,6 @@ export const cameraOperation = (name, draw) => {
     // change the position of the model
     document.addEventListener('keypress', function(e) {
         switch (e.key) {
-            case 'w':
-                camera.C = vecAdd(camera.C, vecScale(camera.V, -objectLen));
-                draw();
-                break;
-            case 's':
-                camera.C = vecAdd(camera.C, vecScale(camera.V, objectLen));
-                draw();
-                break;
-            case 'a':
-                camera.C = vecAdd(camera.C, vecScale(camera.U, objectLen));
-                draw();
-                break;
-            case 'd':
-                camera.C = vecAdd(camera.C, vecScale(camera.U, -objectLen));
-                draw();
-                break;
             case 'i':
                 camera.C[1] -= cameraLen;
                 cameraInit();
