@@ -1,0 +1,9 @@
+canvas {
+    float: left;
+    border: solid 1px black;
+    margin-right: 8%;
+}
+.control_panel {
+    float: right;
+}
+
