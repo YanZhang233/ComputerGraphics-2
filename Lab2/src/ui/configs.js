@@ -37,7 +37,6 @@ export const cameraOperation = (name, draw) => {
                 camera.C[1] -= cameraLen;
                 cameraInit();
                 draw();
-                draw();
                 break;
             case 'k':
                 camera.C[1] += cameraLen;

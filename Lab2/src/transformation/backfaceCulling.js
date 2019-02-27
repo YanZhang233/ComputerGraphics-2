@@ -2,7 +2,6 @@ import { camera } from '../objects/camera.js';
 import { vecSubtract, vec3dCrossMultiply, vec3dDotMultiply } from '../math/matrix.js';
 
 // Visible if Np dot product N > 0
-
 export const backfaceCulling = (model) => {
     const backfaceSet = new Set();
     model.faces.forEach((x, index) => {
