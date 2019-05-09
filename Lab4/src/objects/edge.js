@@ -1,20 +1,20 @@
 // edge
 class edge {
-    yStart;     // same as the edge index in the edge table
-    yMax;       // upper point y
-
-    xStart;     // correspond to yStart
-    delta;      // delta x / delta y
-
-    zStart;         // for zBuffer yIncreament
-    zDeltaToY;
-
-    normalStart;    // vector3d
-    normalEnd;      // vector3d
-
-    // [double, double]
-    textureStart;
-    textureDeltaToY;
+    // yStart;     // same as the edge index in the edge table
+    // yMax;       // upper point y
+    //
+    // xStart;     // correspond to yStart
+    // delta;      // delta x / delta y
+    //
+    // zStart;         // for zBuffer yIncreament
+    // zDeltaToY;
+    //
+    // normalStart;    // vector3d
+    // normalEnd;      // vector3d
+    //
+    // // [double, double]
+    // textureStart;
+    // textureDeltaToY;
 
     constructor(yStart, yMax, xStart, delta, zStart, zDeltaToY, normalStart, normalEnd, textureStart, textureDeltaToY) {
         this.yStart = yStart;
