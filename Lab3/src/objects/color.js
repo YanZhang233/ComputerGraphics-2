@@ -1,9 +1,9 @@
 // Color
 class color {
-    r;
-    g;
-    b;
-    a;
+    // r;
+    // g;
+    // b;
+    // a;
 
     constructor(r = 0, g = 0, b = 0, a = 255) {
         this.r = r;

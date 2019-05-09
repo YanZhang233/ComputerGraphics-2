@@ -1,11 +1,11 @@
 // edge
 class edge {
-    yStart;
-    yMax;
-    xStart;
-    delta;
-    zUpper;
-    zLower;
+    // yStart;
+    // yMax;
+    // xStart;
+    // delta;
+    // zUpper;
+    // zLower;
     constructor(yStart, yMax, xStart, delta, zUpper, zLower) {
         this.yStart = yStart;
         this.yMax = yMax;

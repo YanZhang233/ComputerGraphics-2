@@ -4,7 +4,7 @@ import { edge } from "../objects/edge.js";
 // Scan Conversion
 export const addEdgeToEdgeTable = (lowerPoint, upperPoint, edgeTable, height) => {
     // ignore horizontal edge and out of range points
-    if (toPixel(lowerPoint[1], height) === toPixel(upperPoint[1], height)
+    if (toPixel(lowerPoint[1], height, false) === toPixel(upperPoint[1], height, false)
     || lowerPoint[1] > 1 || lowerPoint[1] < -1) {
         return;
     }
@@ -15,7 +15,7 @@ export const addEdgeToEdgeTable = (lowerPoint, upperPoint, edgeTable, height) =>
     }
 
     // add edges to edgeTable
-    const e = new edge(toPixel(lowerPoint[1], height), toPixel(upperPoint[1], height, true),
+    const e = new edge(toPixel(lowerPoint[1], height, false), toPixel(upperPoint[1], height, true),
         toFloatPixel(lowerPoint[0], height), (lowerPoint[0] - upperPoint[0]) / (lowerPoint[1] - upperPoint[1]), upperPoint[2], lowerPoint[2]);
     if (e.yStart > e.yMax) {
         e.yMax = e.yStart;

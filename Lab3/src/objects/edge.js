@@ -1,13 +1,13 @@
 // edge
 class edge {
-    yStart;
-    yMax;
-    xStart;
-    delta;
-    zStart;
-    zDeltaToY;
-    normalStart;
-    normalEnd;
+    // yStart;
+    // yMax;
+    // xStart;
+    // delta;
+    // zStart;
+    // zDeltaToY;
+    // normalStart;
+    // normalEnd;
 
     constructor(yStart, yMax, xStart, delta, zStart, zDeltaToY, normalStart, normalEnd) {
         this.yStart = yStart;
