@@ -84,15 +84,35 @@ import {model} from "../objects/model.js";
 // };
 
 export const getTexture = (ctx, uploadedTexture, canvasHeight, canvasWidth) => {
-    const file = uploadedTexture.files[0];
-    const reader = new FileReader();
-    reader.readAsArrayBuffer(file);
-    reader.onload = () => {
-        const buffer = reader.result;
-        const bitmap = getBMP(buffer);
-        const imageData = convertToImageData(ctx, bitmap);
-        ctx.putImageData(imageData, 0, 0);
-    };
+    if(uploadedTexture === null) {
+        const width = 1;
+        const height = 1;
+
+        let tBuffer = [];
+        for(let i = 0; i < height; i++) {
+            let h = [];
+            for(let j = 0; j < width * 3; j += 3) {
+                h.push([
+                    230,
+                    25,
+                    25,
+                    255
+                ]);
+            }
+            tBuffer.push(h);
+        }
+        model.textureMap = tBuffer;
+    } else {
+        const file = uploadedTexture.files[0];
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(file);
+        reader.onload = () => {
+            const buffer = reader.result;
+            const bitmap = getBMP(buffer);
+            const imageData = convertToImageData(ctx, bitmap);
+            ctx.putImageData(imageData, 0, 0);
+        };
+    }
 };
 
 export const getBMP = (buffer) => {

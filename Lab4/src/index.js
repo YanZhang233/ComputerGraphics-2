@@ -14,18 +14,18 @@ ctx.fillRect(0, 0, width, height);
 // Draw model on canvas
 const drawCtx = draw(ctx, width, height);
 
-// getTexture(ctx, height, width);
-
-// Read model file
-const uploadedFile1 = document.getElementById("model1");
-uploadedFile1.addEventListener('change', () => {
-    initModel(uploadedFile1, drawCtx, ctx, height, width);
-});
+getTexture(ctx, null, height, width);
 
 // Read texture file
 const uploadedTexture = document.getElementById("texture");
 uploadedTexture.addEventListener('change', () => {
     getTexture(ctx, uploadedTexture, height, width);
+});
+
+// Read model file
+const uploadedFile1 = document.getElementById("model1");
+uploadedFile1.addEventListener('change', () => {
+    initModel(uploadedFile1, drawCtx, ctx, height, width);
 });
 
 // Get three slides ready binding with h, d, f parameter
