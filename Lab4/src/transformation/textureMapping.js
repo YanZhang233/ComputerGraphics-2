@@ -25,8 +25,8 @@ import {model} from "../objects/model.js";
 //         reader.readAsDataURL(file);
 //         reader.onload = () => {
 //             const image = new Image();
-//             // image.src = reader.result;
-//             image.src = 'texture/5.jpg';
+//             image.src = reader.result;
+//             // image.src = 'texture/5.jpg';
 //             image.onload = () => {
 //                 ctx.drawImage(image, 0, 0);
 //                 const width = Math.min(image.width, canvasWidth);

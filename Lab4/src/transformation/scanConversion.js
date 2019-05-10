@@ -112,7 +112,7 @@ export const scanConversion = (model, lights, calcPoints, backfaceSet, height, w
                         //update depth buffer
                         zBuffer[i][k] = zCurrent;
 
-                        // texture map coordinate
+                        // texture map coordinate (UV-Mapping)
 
                         let U = k === Math.floor(left.xStart) ? left.textureStart[0] :
                             left.textureStart[0] * ((Math.floor(right.xStart) - k) / (Math.floor(right.xStart) - Math.floor(left.xStart))) +
